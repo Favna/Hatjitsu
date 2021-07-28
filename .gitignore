@@ -16,5 +16,5 @@ redis.local.conf
 *.heapsnapshot
 *.log
 
-# Ignore yarn lockfiles
-yarn.lock
+# Ignore package-lock.json
+package-lock.json
