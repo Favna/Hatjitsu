@@ -23,7 +23,7 @@ pokerAppServices.service('socket', [
 pokerAppServices.factory('socket', [
 	'$rootScope',
 	function ($rootScope) {
-		var socket = io.connect(location.protocol + '//' + location.hostname, {
+		var socket = io.connect('http' + '//' + location.hostname, {
 			port: location.port,
 			reconnect: true,
 			'reconnection delay': 500,

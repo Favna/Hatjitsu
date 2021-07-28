@@ -1,5 +1,4 @@
 var _ = require('underscore')._;
-var util = require('util');
 
 var Room = function (io, roomUrl) {
 	this.io = io;

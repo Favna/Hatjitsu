@@ -63,10 +63,6 @@ io.configure('production', function () {
 	io.set('log level', 1);
 });
 
-io.configure('development', function () {
-	io.set('log level', 2);
-});
-
 /* EVENT LISTENERS */
 
 io.sockets.on('connection', function (socket) {
