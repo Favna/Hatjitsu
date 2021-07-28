@@ -1,11 +1,8 @@
 var http = require('http');
 var path = require('path');
-var srcDir = path.join(__dirname, '..', 'src');
-
-
 var bodyParser = require('body-parser');
 var express = require('express');
-var lobbyClass = require(path.join(srcDir, 'lib', 'lobby.js'));
+var lobbyClass = require('./lib/lobby');
 var methodOverride = require('method-override');
 var socketIo = require('socket.io');
 
@@ -19,7 +16,7 @@ var port = process.env.PORT || 5608;
 
 // Configuration
 
-app.set('views', path.join(srcDir, 'app'));
+app.set('views', path.join(__dirname, 'app'));
 app.set('view engine', 'ejs');
 app.set('view options', {
     layout: false
@@ -33,7 +30,7 @@ app.use(bodyParser.json())
 
 app.use(methodOverride('X-HTTP-Method-Override'))
 
-app.use(express.static(path.join(srcDir, 'app')))
+app.use(express.static(path.join(__dirname, 'app')));
 
 app.get('/', function(_, res) {
   res.setHeader('Content-Type', 'text/html');
