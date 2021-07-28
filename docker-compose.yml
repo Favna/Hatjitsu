@@ -3,4 +3,4 @@ services:
   hajitsu:
     build: .
     ports:
-      - "5608:5608"
+      - '5608:5608'
