@@ -1,9 +1,12 @@
+var http = require('http');
+var path = require('path');
+var srcDir = path.join(__dirname, '..', 'src');
+
+
 var bodyParser = require('body-parser');
 var express = require('express');
-var http = require('http');
-var lobbyClass = require('./lib/lobby.js');
+var lobbyClass = require(path.join(srcDir, 'lib', 'lobby.js'));
 var methodOverride = require('method-override');
-var path = require('path');
 var socketIo = require('socket.io');
 
 var app = express();
@@ -16,7 +19,7 @@ var port = process.env.PORT || 5608;
 
 // Configuration
 
-app.set('views', path.join(__dirname, 'app'));
+app.set('views', path.join(srcDir, 'app'));
 app.set('view engine', 'ejs');
 app.set('view options', {
     layout: false
@@ -30,7 +33,7 @@ app.use(bodyParser.json())
 
 app.use(methodOverride('X-HTTP-Method-Override'))
 
-app.use(express.static(path.join(__dirname + '/app')))
+app.use(express.static(path.join(srcDir, 'app')))
 
 app.get('/', function(_, res) {
   res.setHeader('Content-Type', 'text/html');
@@ -48,7 +51,7 @@ app.get('/:id', function(req, res) {
 });
 
 server.listen(port, function() {
-  console.log(`Express server listening on port ${port}`);
+  console.log(`Express server listening on http://localhost:${port}`);
 });
 
 io.configure(function () {
