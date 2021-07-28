@@ -1,8 +1,10 @@
 {
   "name": "hatchetapp.net",
   "version": "1.0.0",
+  "main": "api/index.js",
   "scripts": {
-    "format": "prettier --write ./app ./lib"
+    "format": "prettier --write ./app ./lib",
+    "start": "node api/index.js"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -17,5 +19,5 @@
     "@sapphire/prettier-config": "^1.1.6",
     "socket.io-client": "*"
   },
-	"prettier": "@sapphire/prettier-config"
+  "prettier": "@sapphire/prettier-config"
 }

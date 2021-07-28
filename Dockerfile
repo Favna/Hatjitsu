@@ -16,4 +16,4 @@ EXPOSE 5608
 
 USER node
 
-CMD [ "dumb-init", "node", "server.js" ]
+CMD [ "dumb-init", "npm", "run", "start" ]
