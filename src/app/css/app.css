@@ -97,11 +97,7 @@ a:focus {
 	background-image: url(/img/title.png);
 	background-repeat: no-repeat;
 }
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-	.header__text {
-		background-image: url(/img/title@2x.png);
-	}
-}
+
 @media screen and (min-width: 17em) {
 	.header__text {
 		position: relative;
@@ -869,28 +865,18 @@ a:focus {
 .alert {
 	z-index: 3;
 	top: 0;
-	left: 0;
-	width: 100%;
-	position: fixed;
+	right: 75px;
+	height: 64px;
+	width: 64px;
+	right: -15px;
+	position: absolute;
 }
-@media screen and (min-width: 55em) {
-	.alert {
-		position: absolute;
-	}
-}
+
 .alert .activity {
-	width: 1em;
-	height: 1em;
-	background: url(/img/led.gif);
-	text-indent: 100%;
-	margin-top: 0.2em;
-	margin-bottom: 0.2em;
-	margin-right: 0.2em;
-	float: right;
-	text-align: right;
-	-webkit-border-radius: 0.5em;
-	-moz-border-radius: 0.5em;
-	border-radius: 0.5em;
+	background: url(/img/loading.gif);
+	background-repeat: no-repeat;
+	height: 100%;
+	width: 100%;
 }
 .socketMessage,
 .appError,
