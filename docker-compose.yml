@@ -1,0 +1,6 @@
+version: '3'
+services:
+  hajitsu:
+    build: .
+    ports:
+      - "5608:5608"

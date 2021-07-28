@@ -1,0 +1,8 @@
+{
+	"editor.tabSize": 4,
+	"editor.useTabStops": true,
+	"editor.insertSpaces": false,
+	"editor.detectIndentation": true,
+	"files.eol": "\n",
+	"powershell.codeFormatting.addWhitespaceAroundPipe": true
+}
